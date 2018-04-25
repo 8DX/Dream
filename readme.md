@@ -1,6 +1,6 @@
 ### 初识GitHub
 
-###### 创建新储存库
+#### 创建新储存库
 ---
 **初始化git**
 ```
@@ -54,9 +54,34 @@ git remote add origin https://github.com/AdreamStudio/Dream.git
 git push -u origin master
 ```
 ---
+##### 退回
+
+###### 本地退回
+
+按版本回退,回退到上个版本
+```  
+git reset HEAD^  
+```
+
+按版本号回退,回退到某个版本 
+```
+git reset –-soft HEAD~3
+git reset 057d
+```
+
+将本地的状态回退到和远程的一样
+```
+git reset –-hard origin/master
+```
+---
 ##### 强制回退远程提交
 
 ```
 git push origin HEAD --force 
 ```
 ---
+##### 找回git add过但是已经不存在文件中的内容
+
+```
+git fsck --lost-found
+```
