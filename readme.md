@@ -85,3 +85,18 @@ git push origin HEAD --force
 ```
 git fsck --lost-found
 ```
+---
+
+#### 警告
+
+```
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory.
+```
+
+解决办法(仅适用于初次使用)
+```
+$ rm -rf .git  // 删除.git  
+$ git config --global core.autocrlf false  //禁用自动转换
+$ git init   //重新初始化 
+```
